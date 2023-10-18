@@ -57,3 +57,125 @@ else:
             valor_total += qtd*preco3
             qtd3 += qtd
 
+
+CODIGOS DA AULA DE HJ PYTHON 18/10/2023
+'''
+i = 0
+for i in range(10): #Faça com que certos caracteres assumam um certo valor, ou seja predefina um limite de coisas
+    print(i)
+
+i = 0
+while i < 10:
+    print(i)
+    i+=1    #Repita enquanto uma condição for verdadeira
+    #Nunca alterar a variavel dentro do looping do for, pra nao dar erro no codigo
+    #range = conjunto com os valores que minha variavel vai assumir
+    #Len mede a quantidade de objetos no conjunto
+#for e while ambos são estruturas de repetição
+'''
+'''
+i = 0
+for i in range(10):
+    print(i)
+print()
+for char in 'danilo':
+    print(char)
+'''
+'''
+for i in range(1,100,7):
+    print(i)
+
+for i in range(0,100,2):
+    print(i)
+
+for i in range(0,10,-2):
+    print(i) 
+'''
+'''
+soma = 0
+for i in range(5):
+    nota = int(input("Diga sua nota : "))
+    soma += nota
+print(soma/5)
+'''
+'''
+senha = '1234'
+usuario = 'henrique'
+for login in range(3):
+    usuario = input("Diga seu usuario : ")
+    senha = int(input("Diga sua senha : "))
+    if usuario == usuario and senha == senha:
+        print("Acesso liberado ")
+        break
+'''
+'''
+for num in range(1,11):
+   print(f"\n Tabuada do {num} : ")
+   for i in range(1,11):
+      print(f"{num} * {i} = {num*i}", end=',')
+'''
+'''
+lista = [0,2,1,'idsffh', True]
+for elem in lista:
+    print(elem)
+'''
+'''
+lista = [30,40,50,60,70,80,90,]
+for elem in lista:
+    elem = 1
+print(lista)
+
+
+for i in range (len(lista)):
+    lista[i] = i
+print(lista)
+'''
+'''
+lista = []
+lista.append(34)
+print(lista)
+lista.append(50)
+print(lista)
+'''
+'''
+soma = 0
+lista = []
+nota = 5
+for i in range(5):
+    nota = int(input("Diga sua nota : "))
+    lista.append(nota)
+    soma+=nota
+    print(lista)
+print(soma/5)
+if nota <= 5:
+    print("Essa nota esta a baixo da média ")
+if nota >= 6:
+    print("Você está a cima da média!")
+'''
+'''
+nomes = ['Danilo,Henrique,Rafael,Pedro,Jose,João,Maria,Thiago,Marcelo,Kevin']
+for i in range(len(nomes)):
+    if nomes[i] == "Danilo":
+        print("O DANILO É TOP!!")
+        print(f"Encontrei no indice {i}")
+'''
+
+lista = [4,2,6,7,5,1]
+maior = lista[0]
+for i in range(len(lista)):
+    candidato = lista[i]
+    print(f"Vou testar se o {candidato} > {maior}")
+    if candidato > maior:
+        print(f"Troquei o  {maior} por {candidato}")
+        maior = candidato
+
+
+
+
+
+
+
+
+
+
+
