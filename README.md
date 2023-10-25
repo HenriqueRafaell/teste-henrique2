@@ -169,6 +169,77 @@ for i in range(len(lista)):
         print(f"Troquei o  {maior} por {candidato}")
         maior = candidato
 
+CODIGOS DA AULA DO DIA 25/10/2023, AULA DE PYTHON 
+
+#for = "Faça com que as variaveis assumam todos os valores que eu determinar
+
+'''
+lista = ['a', 'b', 'c', 'd']
+
+for i in range(len(lista)):
+    print(f"lista[{i}] = {lista [i]}")
+for elem in lista:
+    print(elem)
+
+
+for i in range(10, 0 , -2):
+    print(i)
+
+#Alterando a cópia do valor
+lista = ['a', 'b', 'c', 'd']
+for elem in lista:
+    elem = 1
+    print(elem)
+
+for i in range(len(lista)):
+    lista[i]
+print(lista)
+
+ano = [2010, 2004 , 2005 , 2006]
+carros = ['celtinha brabo ', 'gol bola ', 'golf', 'veloster']
+precos = ['1.000.000' , '500' , '900' , '400']
+for i in range(len(carros)):
+    print(f" O carro é um {carros [i]}, o valor dele é {precos [i]} R$ \n ")
+if carros[i] == 'celtinha brabo':
+    print(f"O {carros[i]} esta na lista ")
+elif carros != [0]:
+    print("O celtinha brabo infelizmente não esta na lista ")
+resposta = input("Diga o nome do carro escolhido : ")
+while resposta not in carros:
+    print("Deve ser um desses!")
+    for carro in carros:
+        print(carro)
+    resposta = input("Diga o nome do carro : ")
+for i in range(len(carros)):
+    if carros [i] == resposta:
+        indice = i
+        break
+print(f"O carro {carros [indice]} custa {precos[indice]} e foi fabricado em {ano[indice]} ")
+
+ano = [2010, 2004 , 2005 , 2006]
+carros = ['celtinha brabo ', 'gol bola ', 'golf', 'veloster']
+precos = ['1.000.000' , '500' , '900' , '400']
+indice_maior = 0
+maior = precos[indice_maior]
+for i in range(len(precos)):
+    candidato = precos[i]
+    print(f"Vou testar se {candidato} > {maior}")
+    if candidato > maior:
+        print(f"Vou trocar o {maior} por {candidato}")
+        maior = candidato
+        indice_maior = i
+print(precos[indice_maior], carros[indice_maior])
+'''
+lista = [0,1,2,3,4,5,6,7]
+for i in range(len(lista)):
+    for subtracao in range(len(lista)-1-i):
+       aux = 
+
+
+
+
+
+
 
 
 
