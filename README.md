@@ -171,70 +171,137 @@ for i in range(len(lista)):
 
 CODIGOS DA AULA DO DIA 25/10/2023, AULA DE PYTHON 
 
-#for = "Faça com que as variaveis assumam todos os valores que eu determinar
-
-'''
-lista = ['a', 'b', 'c', 'd']
-
+'''lista = ['a','b','c','d']
 for i in range(len(lista)):
-    print(f"lista[{i}] = {lista [i]}")
+    print(f"lista[{i}] = {lista[i]}")
+
 for elem in lista:
     print(elem)
 
-
-for i in range(10, 0 , -2):
+for i in range(0,10,-2):
     print(i)
 
-#Alterando a cópia do valor
-lista = ['a', 'b', 'c', 'd']
+lista = ['a','b','c','d']
 for elem in lista:
     elem = 1
     print(elem)
 
 for i in range(len(lista)):
-    lista[i]
+    lista[i] = 1
 print(lista)
+#faça uma lista com nomes de carros
+#printe a frase "O carro é ..."
 
-ano = [2010, 2004 , 2005 , 2006]
-carros = ['celtinha brabo ', 'gol bola ', 'golf', 'veloster']
-precos = ['1.000.000' , '500' , '900' , '400']
+i=0
+for carro in carros:
+    print(f"O carro é {carro} e seu preco é {precos[i]}")
+    i+=1
+print()
+
+
 for i in range(len(carros)):
-    print(f" O carro é um {carros [i]}, o valor dele é {precos [i]} R$ \n ")
-if carros[i] == 'celtinha brabo':
-    print(f"O {carros[i]} esta na lista ")
-elif carros != [0]:
-    print("O celtinha brabo infelizmente não esta na lista ")
-resposta = input("Diga o nome do carro escolhido : ")
+    if carros[i] == 'celtinha brabo':
+        print(f"O carro é {carros[i]} e seu preço é {precos[i]}")
+        break
+    elif i == len(carros)-1:
+        print('carro não encontrado')
+#de todas as opções de carro para o usuario
+#obrigue-o a escrever uma opção cadastrada
+#traga todas as informações sobre o carro escolhido
+resposta = input("Diga o nome do carro : ")
 while resposta not in carros:
-    print("Deve ser um desses!")
+    print("Deve ser um desses : ")
     for carro in carros:
         print(carro)
     resposta = input("Diga o nome do carro : ")
 for i in range(len(carros)):
-    if carros [i] == resposta:
+    if carros[i] == resposta:
         indice = i
         break
-print(f"O carro {carros [indice]} custa {precos[indice]} e foi fabricado em {ano[indice]} ")
+print(f"O carro {carros[indice]} custa {precos[indice]} e foi fabricado em {ano[indice]}")
 
-ano = [2010, 2004 , 2005 , 2006]
-carros = ['celtinha brabo ', 'gol bola ', 'golf', 'veloster']
-precos = ['1.000.000' , '500' , '900' , '400']
+ano = [2010,2011,2014,2002,2005]
+
+carros = ['up','uno','celtinha brabo','gol','kombi']
+precos = [100,200,1000000,300,400,500]
 indice_maior = 0
 maior = precos[indice_maior]
-for i in range(len(precos)):
+for i in range(1,len(precos)):
     candidato = precos[i]
     print(f"Vou testar se {candidato} > {maior}")
     if candidato > maior:
-        print(f"Vou trocar o {maior} por {candidato}")
+        print(f"Vou trocar {maior} por {candidato}")
         maior = candidato
         indice_maior = i
 print(precos[indice_maior], carros[indice_maior])
-'''
-lista = [0,1,2,3,4,5,6,7]
-for i in range(len(lista)):
-    for subtracao in range(len(lista)-1-i):
-       aux = 
+maior = max(precos)
+local = precos.index(maior)
 
+lista = [4,2,6,1,7,0]
+
+print(lista)
+for i in range(len(lista)//2):
+    ultimo = len(lista)-1
+    aux = lista[i]
+    lista[i] = lista[ultimo-i]
+    lista[ultimo-i] = aux
+    print(lista)
+print()
+lista = [4,2,6,1,7,0]
+'''
+def input_numerico(msg):
+    resposta = input(msg)
+    while not resposta.isnumeric():
+        print("Tem que ser um numero inteiro!!!")
+        resposta = input(msg)
+    resposta = int(resposta)
+    return resposta
+def conta_pares(numeros):
+    pares = 0
+    for num in  numeros:
+        if num%2==0:
+            pares+=1
+    return pares
+def calcula_media(lista_notas):
+    soma = 0
+    for nota in lista_notas:
+        soma+=nota
+    media = soma/len(lista_notas)
+    return media
+
+'''notas_1 = [1,2,3,4,5,6]
+notas_2 = [10,20,30]
+notas_3 = [11,12,13,14,15]
+
+media_1 = calcula_media(notas_1)
+media_2 = calcula_media(notas_2)
+media_3 = calcula_media(notas_3)
+
+print(media_1,media_2,media_3)'''
+def forca_opcao(msg,lista_opcoes):
+    resposta = input(msg)
+    while resposta not in lista_opcoes:
+        print("Deve ser um desses : ")
+        for opcao in lista_opcoes:
+            print(opcao)
+        resposta = input(msg)
+    return resposta
+#num = int(forca_opcao("diga um numero entre 0 e 3",['0','1','2','3']))
+#carro = forca_opcao("Diga o carro de seu interesse : ",['up','celta','uno'])
+#sair_ou_nao = forca_opcao("Voce deseja continuar ou encerrar ? ",['continuar','encerrar'])
+#sim_ou_nao = forca_opcao("Diga sim ou não",['sim','nao'])
+#print(carro,sair_ou_nao,sim_ou_nao)
+
+def inverte_lista(lista):
+    for i in range(len(lista)//2):
+        ultimo = len(lista)-1
+        aux = lista[i]
+        lista[i] = lista[ultimo-i]
+        lista[ultimo-i] = aux
+        print(lista)
+    return lista
+lista = [4,2,6,1,7,0]
+print(inverte_lista(lista))
 
 
 
